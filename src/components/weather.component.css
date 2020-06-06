@@ -1,0 +1,40 @@
+
+.weather {
+    padding: 10px;
+}
+
+.time, .title {
+    font-size: 15px;
+}
+
+
+
+
+ /*- - - -*/
+.parent {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.top {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.temp {
+    font-size: 40px;
+}
+
+.degrees {
+    font-size: 20px;
+}
+
+.hours {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}

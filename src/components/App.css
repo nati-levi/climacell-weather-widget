@@ -1,0 +1,59 @@
+:root {
+  --blackish: #000000;
+  --black: #333333;
+  --white: #ffffff;
+  --blue-light: #e0eeff;
+  --yellow: #ffd02f;
+  --grey-dark: #6c757d;
+  --grey: #dfdfdf;
+  --greyish: #b4b4b4;
+  --grey-light: #ebebeb;
+  --grey-lighter: #f6f6f6;
+  --grey-lightest: #fafafa;
+  --white-grey: #f9f9f9;
+  --green: #4eceb1;
+  --gold: #e6b200;
+  --cherry-red: #ec002d;
+  --text-color: #4c555a;
+}
+
+#root {
+  font-family: proxima nova,proxima-nova,-apple-system,BlinkMacSystemFont,Segoe UI,open sans,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border: solid 1px var(--grey-light);
+  background-color: var(--white);
+  color: var(--grey-dark);
+  margin: 0 auto;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+}
+
+/*.App {*/
+/*  text-align: center;*/
+/*}*/
+
+/*.App-logo {*/
+/*  height: 40px;*/
+/*}*/
+
+/*.App-header {*/
+/*  background-color: #222;*/
+/*  height: 150px;*/
+/*  padding: 20px;*/
+/*  color: white;*/
+/*}*/
+
+/*.App-intro {*/
+/*  font-size: large;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*  from { transform: rotate(0deg); }*/
+/*  to { transform: rotate(360deg); }*/
+/*}*/

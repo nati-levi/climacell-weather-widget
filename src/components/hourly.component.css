@@ -1,0 +1,12 @@
+
+.hourly {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.hour {
+    text-align: center;
+    font-size: 15px;
+}

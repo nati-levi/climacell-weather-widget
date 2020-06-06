@@ -1,0 +1,19 @@
+
+.realtime {
+    display:flex;
+    flex-direction: row;
+    justify-content: left;
+    border-bottom: solid 1px var(--grey-light);
+}
+
+
+.realtime-temp {
+    font-size: 60px;
+}
+.realtime-temp-degrees {
+    font-size: 10px;
+}
+
+.realtime-icon {
+    align-self: end;
+}
