@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import { App } from './components/app.component'
 import './index.css';
 
 const params = new URLSearchParams(window.location.search);

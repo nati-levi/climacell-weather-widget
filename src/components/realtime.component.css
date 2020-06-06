@@ -3,17 +3,24 @@
     display:flex;
     flex-direction: row;
     justify-content: left;
-    border-bottom: solid 1px var(--grey-light);
+    margin-bottom: 16px;
 }
-
 
 .realtime-temp {
     font-size: 60px;
+    line-height: 60px;
+    font-weight: bold;
 }
+
 .realtime-temp-degrees {
-    font-size: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    align-self: flex-start;
+    margin-right: 16px;
 }
 
 .realtime-icon {
-    align-self: end;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
 }

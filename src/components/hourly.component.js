@@ -9,12 +9,9 @@ function Hourly({ hourly }) {
         <div className="hourly">
             {hourly.map(hour => (
                 <div className="hour">
-                    <div className="">
-                        {formatTime(hour.observation_time.value)}
-
-                    </div>
-                    <div className=""><Icon value={hour.weather_code.value} /></div>
-                    <div className=""><Temp value={hour.temp.value}/></div>
+                    <div className="hour-time">{formatTime(hour.observation_time.value)}</div>
+                    <div className="hour-icon"><Icon value={hour.weather_code.value} /></div>
+                    <div className="hour-temp"><Temp value={hour.temp.value} />°</div>
                 </div>
             ))}
         </div>

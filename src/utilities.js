@@ -24,10 +24,11 @@ const addHours = ({ date, hours = 0 }) => {
 };
 
 const formatTime = (time) => {
-    const date = new Date(time);
-    let hours = date.getHours();
+    const hours = new Date(time).getHours();
     const suffix = hours >= 12 ? 'PM' : 'AM';
-    return `${hours % 12}${suffix}`;
+    let display = hours % 12;
+    if (display === 0) { display = 12; }
+    return `${display}${suffix}`;
 };
 
 export { createUrl, addHours, formatTime };

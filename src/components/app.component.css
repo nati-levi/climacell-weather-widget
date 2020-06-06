@@ -18,42 +18,28 @@
 }
 
 #root {
-  font-family: proxima nova,proxima-nova,-apple-system,BlinkMacSystemFont,Segoe UI,open sans,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-family: 'Muli', sans-serif;
   max-width: 600px;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   border: solid 1px var(--grey-light);
   background-color: var(--white);
-  color: var(--grey-dark);
+  color: var(--blackish);
   margin: 0 auto;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-img {
-  width: 40px;
-  height: 40px;
+.app-root {
+  padding: 16px;
 }
 
-/*.App {*/
-/*  text-align: center;*/
-/*}*/
+.divider {
+  border-bottom: solid 1px var(--grey-light);
+  margin-bottom: 16px;
+}
 
-/*.App-logo {*/
-/*  height: 40px;*/
-/*}*/
-
-/*.App-header {*/
-/*  background-color: #222;*/
-/*  height: 150px;*/
-/*  padding: 20px;*/
-/*  color: white;*/
-/*}*/
-
-/*.App-intro {*/
-/*  font-size: large;*/
-/*}*/
-
-/*@keyframes App-logo-spin {*/
-/*  from { transform: rotate(0deg); }*/
-/*  to { transform: rotate(360deg); }*/
-/*}*/
+.powered {
+  text-align: right;
+}
