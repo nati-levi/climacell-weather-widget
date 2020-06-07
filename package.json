@@ -1,7 +1,7 @@
 {
-  "name": "widget-for-blog",
-  "version": "0.1.0",
-  "private": true,
+  "name": "climacell-weather-widget",
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
