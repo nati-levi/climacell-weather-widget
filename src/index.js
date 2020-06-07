@@ -8,7 +8,7 @@ const params = new URLSearchParams(window.location.search);
 const apikey = params.get('apikey');
 const lat = params.get('lat');
 const lon = params.get('lon');
-const title = params.get('title');
+const location = params.get('location');
 
 // test values!
     // const apikey = 'sfyng6rOhw9feFrxrUXqN7sLxTS0GjmF';
@@ -18,6 +18,6 @@ const title = params.get('title');
 
 ReactDOM
     .render(
-        <App apikey={apikey} lat={lat} lon={lon} title={title} />,
+        <App apikey={apikey} lat={lat} lon={lon} location={location} />,
         document.getElementById('root')
     );

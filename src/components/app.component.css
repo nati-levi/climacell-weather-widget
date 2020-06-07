@@ -1,45 +1,74 @@
 :root {
-  --blackish: #000000;
-  --black: #333333;
-  --white: #ffffff;
-  --blue-light: #e0eeff;
-  --yellow: #ffd02f;
-  --grey-dark: #6c757d;
-  --grey: #dfdfdf;
-  --greyish: #b4b4b4;
-  --grey-light: #ebebeb;
-  --grey-lighter: #f6f6f6;
-  --grey-lightest: #fafafa;
-  --white-grey: #f9f9f9;
-  --green: #4eceb1;
-  --gold: #e6b200;
-  --cherry-red: #ec002d;
-  --text-color: #4c555a;
+    --blackish: #000000;
+    --black: #333333;
+    --white: #ffffff;
+    --blue-light: #e0eeff;
+    --yellow: #ffd02f;
+    --grey-dark: #6c757d;
+    --grey: #dfdfdf;
+    --greyish: #b4b4b4;
+    --grey-light: #ebebeb;
+    --grey-lighter: #f6f6f6;
+    --grey-lightest: #fafafa;
+    --white-grey: #f9f9f9;
+    --green: #4eceb1;
+    --gold: #e6b200;
+    --cherry-red: #ec002d;
+    --text-color: #4c555a;
 }
 
 #root {
-  font-family: 'Muli', sans-serif;
-  max-width: 600px;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-  border: solid 1px var(--grey-light);
-  background-color: var(--white);
-  color: var(--blackish);
-  margin: 0 auto;
-  font-size: 16px;
-  box-sizing: border-box;
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    color: var(--grey-dark);
+
+    background-color: var(--white);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.icon {
+    height: 14px;
+    width: 14px;
+    vertical-align: middle;
 }
 
 .app-root {
-  padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px var(--grey-light);
+    padding: 16px;
+    display: inline-block;
 }
 
 .divider {
-  border-bottom: solid 1px var(--grey-light);
-  margin-bottom: 16px;
+    border-bottom: solid 1px var(--grey-light);
+    margin-bottom: 16px;
 }
 
 .powered {
-  text-align: right;
+    text-align: right;
+}
+
+.powered-link {
+  text-decoration: none;
+  color: var(--grey-dark);
+}
+
+.powered-icon {
+    margin-left: 2px;
+}
+
+.time {
+    margin-bottom: 4px;
+}
+
+.location {
+    margin-bottom: 16px;
+}
+
+.icon-pin {
+    margin-right: 2px;
 }

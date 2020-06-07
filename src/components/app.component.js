@@ -4,16 +4,10 @@ import { Realtime } from "./realtime.component";
 import { Hourly } from "./hourly.component";
 import { useHourly, useRealtime } from "../hooks/use-realtime.hook";
 import { useTime } from "../hooks/use-time.hook";
+import ClimacellIcon from '../icons/climacell-icon.svg';
+import PinIcon from '../icons/pin.svg';
 
-function Loading() {
-    return <div>Loading...</div>;
-}
-
-function Error() {
-    return <div>Error occurred.</div>;
-}
-
-function App({ apikey, lat, lon, title }) {
+function App({ apikey, lat, lon, location }) {
     const [realtimeResponse, loadingRealtime, realtimeHasError] = useRealtime({ apikey, lat, lon });
     const [hourlyResponse, loadingHourly, hourlyHasError] = useHourly({ apikey, lat, lon });
     const time = useTime();
@@ -24,13 +18,27 @@ function App({ apikey, lat, lon, title }) {
     return (
         <div className="app-root">
             {loading ?
-                <Loading /> :
+                <div>Loading...</div> :
                 (hasError ?
-                        <Error /> :
+                        <div>Error occurred.</div> :
                         <div>
-                            <div className="powered">powered by climacell</div>
+                            <div className="powered">
+                                <a className="powered-link" href="https://www.climacell.co">
+                                    Powered by ClimaCell
+                                    <img className="icon powered-icon"
+                                         src={ClimacellIcon}
+                                         alt="Powered by ClimaCell"
+                                         title="Powered by ClimaCell" />
+                                </a>
+                            </div>
                             <div className="time">{new Date(time).toDateString()}</div>
-                            <div className="title">{title}</div>
+                            <div className="location">
+                                <img className="icon icon-pin"
+                                     src={PinIcon}
+                                     alt={location}
+                                     title={location} />
+                                {location}
+                            </div>
                             <Realtime realtime={realtimeResponse} />
                             <div className="divider" />
                             <Hourly hourly={hourlyResponse} />

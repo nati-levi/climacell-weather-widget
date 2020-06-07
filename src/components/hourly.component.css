@@ -7,7 +7,7 @@
 .hour {
     text-align: center;
     margin: 0 14px;
-    font-size: 14px;
+    color: var(--blackish);
 }
 
 .hour-icon {

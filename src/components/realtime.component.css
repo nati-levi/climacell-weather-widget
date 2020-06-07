@@ -1,8 +1,9 @@
 
 .realtime {
-    display:flex;
+    display: flex;
     flex-direction: row;
     justify-content: left;
+    align-items: center;
     margin-bottom: 16px;
 }
 
@@ -10,17 +11,26 @@
     font-size: 60px;
     line-height: 60px;
     font-weight: bold;
+    color: var(--blackish);
 }
 
 .realtime-temp-degrees {
-    font-size: 18px;
+    color: var(--blackish);
     font-weight: bold;
     align-self: flex-start;
     margin-right: 16px;
+    margin-top: 4px;
+}
+
+.realtime-weather-code{
+    color: var(--blackish);
+}
+
+.realtime-feels-like {
 }
 
 .realtime-icon {
-    width: 60px;
-    height: 60px;
+    width: 66px;
+    height: 66px;
     margin-left: auto;
 }

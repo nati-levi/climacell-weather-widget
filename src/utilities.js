@@ -27,8 +27,14 @@ const formatTime = (time) => {
     const hours = new Date(time).getHours();
     const suffix = hours >= 12 ? 'PM' : 'AM';
     let display = hours % 12;
-    if (display === 0) { display = 12; }
+    if (display === 0) {
+        display = 12;
+    }
     return `${display}${suffix}`;
 };
 
-export { createUrl, addHours, formatTime };
+const prettyPrintWeatherCode = (str) =>{
+    return str.replace('_', ' ').replace(/\b[a-zA-Z]/g, (first) =>first.toUpperCase());
+};
+
+export { createUrl, addHours, formatTime, prettyPrintWeatherCode };
