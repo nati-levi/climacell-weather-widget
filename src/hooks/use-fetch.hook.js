@@ -9,6 +9,9 @@ function useFetch({ url}) {
         setLoading(true);
         fetch(url)
             .then((res) => {
+                if (res.status !== 200) {
+                    throw new Error(res.statusText);
+                }
                 return res.json();
             })
             .then((res) => {
