@@ -3,6 +3,7 @@
     --black: #333333;
     --white: #ffffff;
     --blue-light: #e0eeff;
+    --blue: #0072f5;
     --yellow: #ffd02f;
     --grey-dark: #6c757d;
     --grey: #dfdfdf;
@@ -45,20 +46,21 @@
 
 .divider {
     border-bottom: solid 1px var(--grey-light);
-    margin-bottom: 16px;
+    margin: 16px -16px 16px -16px;
 }
 
 .powered {
-    text-align: right;
+    font-size: 14px;
+    float: right;
 }
 
 .powered-link {
-  text-decoration: none;
-  color: var(--grey-dark);
+    text-decoration: none;
+    color: var(--blue);
 }
 
 .powered-icon {
-    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .time {
@@ -69,6 +71,13 @@
     margin-bottom: 16px;
 }
 
-.icon-pin {
+.location-icon {
     margin-right: 2px;
+    opacity: .5;
+}
+
+@media only screen and (max-width: 768px) {
+    .powered {
+        max-width: 90px;
+    }
 }

@@ -1,15 +1,12 @@
 import { useFetch } from "./use-fetch.hook";
-import { addHours, createUrl } from "../utilities";
+import { createUrl } from "../utilities";
 
 const HOURLY_URL = 'https://api.climacell.co/v3/weather/forecast/hourly';
 const REALTIME_URL = 'https://api.climacell.co/v3/weather/realtime';
 const UNIT_SYSTEM = 'si';
 const FIELDS = 'precipitation,temp,feels_like,weather_code';
 
-const start = new Date();
-const end = addHours({ date: start, hours: 6 });
-
-const useHourly = ({ lat, lon, apikey }) => {
+const useHourly = ({ lat, lon, apikey, start, end }) => {
     const url = createUrl({
         url: HOURLY_URL,
         query: {

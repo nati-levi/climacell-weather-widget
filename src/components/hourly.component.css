@@ -8,10 +8,32 @@
     text-align: center;
     margin: 0 14px;
     color: var(--blackish);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hour:first-child {
+    margin-left: 0;
+}
+
+.hour:last-child {
+    margin-right: 0;
 }
 
 .hour-icon {
     width: 40px;
     height: 40px;
     margin: 6px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .hourly {
+        flex-direction: column;
+    }
+    .hour {
+        flex-direction: row;
+        margin: 0;
+    }
 }

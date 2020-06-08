@@ -4,7 +4,6 @@
     flex-direction: row;
     justify-content: left;
     align-items: center;
-    margin-bottom: 16px;
 }
 
 .realtime-temp {
@@ -26,11 +25,28 @@
     color: var(--blackish);
 }
 
-.realtime-feels-like {
-}
-
 .realtime-icon {
     width: 66px;
     height: 66px;
     margin-left: auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .realtime-temp {
+        font-size: 50px;
+        line-height: 50px;
+    }
+
+    .realtime-temp-degrees {
+        margin-right: 10px;
+    }
+
+    .realtime-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .realtime-feels-like {
+        margin-right: 10px;
+    }
 }
