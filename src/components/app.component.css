@@ -25,6 +25,7 @@
 
     background-color: var(--white);
     box-sizing: border-box;
+    margin-top: 16px;
     display: flex;
     flex-direction: row;
     justify-content: center;

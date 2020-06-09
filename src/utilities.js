@@ -1,3 +1,9 @@
+/**
+ * Creates a full URL from a base URL and query params.
+ * @param url
+ * @param query
+ * @returns {string}
+ */
 const createUrl = ({ url, query = {} }) => {
     const urlBuilder = new URL(url);
 
@@ -17,12 +23,23 @@ const createUrl = ({ url, query = {} }) => {
     return urlBuilder.toString();
 };
 
+/**
+ * Returns a date <hours> after the given <date>.
+ * @param date
+ * @param hours
+ */
 const addHours = ({ date, hours = 0 }) => {
     const newDate = new Date(date.valueOf());
     newDate.setTime(date.getTime() + hours * 60 * 60 * 1000);
     return newDate;
 };
 
+/**
+ * Formats time in a way we want to present it.
+ * Examples: 7AM, 12PM
+ * @param time
+ * @returns {string}
+ */
 const formatTime = (time) => {
     const hours = new Date(time).getHours();
     const suffix = hours >= 12 ? 'PM' : 'AM';
@@ -33,6 +50,12 @@ const formatTime = (time) => {
     return `${display}${suffix}`;
 };
 
+/**
+ * Converts weather code value to human display string.
+ * Example: freezing_rain to Freezing Rain
+ * @param str
+ * @returns {string}
+ */
 const prettyPrintWeatherCode = (str) =>{
     return str.replace('_', ' ').replace(/\b[a-zA-Z]/g, (first) =>first.toUpperCase());
 };

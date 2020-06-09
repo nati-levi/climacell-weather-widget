@@ -1,6 +1,6 @@
 import React from 'react';
 import './hourly.component.css';
-import { formatTime, prettyPrintWeatherCode } from "../utilities";
+import { formatTime } from "../utilities";
 import { Temp } from "./temp.component";
 import { WeatherIcon } from "./weather-icon.component";
 

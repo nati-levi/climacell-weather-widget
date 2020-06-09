@@ -6,7 +6,16 @@ const REALTIME_URL = 'https://api.climacell.co/v3/weather/realtime';
 const UNIT_SYSTEM = 'si';
 const FIELDS = 'precipitation,temp,feels_like,weather_code';
 
-const useHourly = ({ lat, lon, apikey, start, end }) => {
+/**
+ * A react hook that fetches hourly forecast for a given location (<lat>, <lon>) for a time frame (<start>, <end>).
+ * @param apikey
+ * @param lat
+ * @param lon
+ * @param start
+ * @param end
+ * @returns {[response, loading, hasError]}
+ */
+const useHourly = ({ apikey, lat, lon, start, end }) => {
     const url = createUrl({
         url: HOURLY_URL,
         query: {
@@ -23,7 +32,14 @@ const useHourly = ({ lat, lon, apikey, start, end }) => {
     return useFetch({ url });
 };
 
-const useRealtime = ({ lat, lon, apikey }) => {
+/**
+ * A react hook that fetches realtime data for a given location (<lat>, <lon>) for a time frame (<start>, <end>).
+ * @param apikey
+ * @param lat
+ * @param lon
+ * @returns {[response, loading, hasError]}
+ */
+const useRealtime = ({ apikey, lat, lon }) => {
     const url = createUrl({
         url: REALTIME_URL,
         query: {

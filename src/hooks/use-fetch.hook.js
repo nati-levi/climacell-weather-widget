@@ -1,5 +1,10 @@
 import { useState, useEffect } from 'react';
 
+/**
+ * A hook that fetches the given <url>.
+ * @param url
+ * @returns {[response, loading, hasError]}
+ */
 function useFetch({ url }) {
     const [response, setResponse] = useState({});
     const [loading, setLoading] = useState(true);
