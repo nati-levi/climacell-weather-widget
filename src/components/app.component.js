@@ -33,36 +33,32 @@ function PoweredByClimacell() {
 }
 
 function App({ apikey, lat, lon, location }) {
-    const [realtimeResponse, loadingRealtime, realtimeHasError] = useRealtime({ apikey, lat, lon });
-    const [hourlyResponse, loadingHourly, hourlyHasError] = useHourly({
-        apikey,
-        lat,
-        lon,
-        start: now,
-        end: sixHoursFromNow
+    const [realtimeResponse, loadingRealtime, realtimeHasError] = useRealtime({
+        apikey, lat, lon
     });
-
-    const loading = loadingRealtime || loadingHourly;
-    const hasError = realtimeHasError || hourlyHasError;
+    const [hourlyResponse, loadingHourly, hourlyHasError] = useHourly({
+        apikey, lat, lon, start: now, end: sixHoursFromNow
+    });
 
     return (
         <div className="app-root">
-            {loading ? <Loading /> : (hasError ? <Error /> :
-                    <div>
-                        <PoweredByClimacell />
-                        <div className="time">{now.toDateString()}</div>
-                        <div className="location">
-                            <img className="icon location-icon"
-                                 src={PinIcon}
-                                 alt={location}
-                                 title={location} />
-                            {location}
+            {loadingRealtime || loadingHourly ? <Loading /> :
+                (realtimeHasError || hourlyHasError ? <Error /> :
+                        <div>
+                            <PoweredByClimacell />
+                            <div className="time">{now.toDateString()}</div>
+                            <div className="location">
+                                <img className="icon location-icon"
+                                     src={PinIcon}
+                                     alt={location}
+                                     title={location} />
+                                {location}
+                            </div>
+                            <Realtime realtime={realtimeResponse} />
+                            <div className="divider" />
+                            <Hourly hourly={hourlyResponse} />
                         </div>
-                        <Realtime realtime={realtimeResponse} />
-                        <div className="divider" />
-                        <Hourly hourly={hourlyResponse} />
-                    </div>
-            )}
+                )}
         </div>
     );
 }
