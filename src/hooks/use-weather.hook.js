@@ -2,7 +2,8 @@ import { useFetch } from "./use-fetch.hook";
 import { createUrl } from "../utilities";
 
 /**
- * A react hook that fetches hourly forecast for a given location (<lat>, <lon>) for a time frame (<start>, <end>).
+ * A react hook that fetches hourly forecast for a given location
+ * (<lat>, <lon>) for a time frame (<start>, <end>).
  */
 const useHourly = ({ apikey, lat, lon, start, end }) => {
     const url = createUrl({
@@ -22,7 +23,8 @@ const useHourly = ({ apikey, lat, lon, start, end }) => {
 };
 
 /**
- * A react hook that fetches realtime data for a given location (<lat>, <lon>) for a time frame (<start>, <end>).
+ * A react hook that fetches realtime data for a given location
+ * (<lat>, <lon>) for a time frame (<start>, <end>).
  */
 const useRealtime = ({ apikey, lat, lon }) => {
     const url = createUrl({
