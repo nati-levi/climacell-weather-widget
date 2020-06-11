@@ -22,13 +22,18 @@
     font-family: 'Muli', sans-serif;
     font-size: 14px;
     color: var(--grey-dark);
+    border-radius: 8px;
+
+    display: inline-block;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px var(--grey-light);
+    padding: 16px;
 
     background-color: var(--white);
     box-sizing: border-box;
     margin-top: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
+    text-align: left
 }
 
 .icon {
@@ -38,11 +43,7 @@
 }
 
 .app-root {
-    border-radius: 8px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-    border: solid 1px var(--grey-light);
-    padding: 16px;
-    display: inline-block;
+    text-align: left;
 }
 
 .divider {

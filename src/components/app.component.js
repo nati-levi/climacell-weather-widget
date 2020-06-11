@@ -40,25 +40,28 @@ function App({ apikey, lat, lon, location }) {
         apikey, lat, lon, start: now, end: sixHoursFromNow
     });
 
+    if (loadingRealtime || loadingHourly) {
+        return <Loading />;
+    }
+
+    if (realtimeHasError || hourlyHasError) {
+        return <Error />;
+    }
+
     return (
         <div className="app-root">
-            {loadingRealtime || loadingHourly ? <Loading /> :
-                (realtimeHasError || hourlyHasError ? <Error /> :
-                        <div>
-                            <PoweredByClimacell />
-                            <div className="time">{now.toDateString()}</div>
-                            <div className="location">
-                                <img className="icon location-icon"
-                                     src={PinIcon}
-                                     alt={location}
-                                     title={location} />
-                                {location}
-                            </div>
-                            <Realtime realtime={realtimeResponse} />
-                            <div className="divider" />
-                            <Hourly hourly={hourlyResponse} />
-                        </div>
-                )}
+            <PoweredByClimacell />
+            <div className="time">{now.toDateString()}</div>
+            <div className="location">
+                <img className="icon location-icon"
+                     src={PinIcon}
+                     alt={location}
+                     title={location} />
+                {location}
+            </div>
+            <Realtime realtime={realtimeResponse} />
+            <div className="divider" />
+            <Hourly hourly={hourlyResponse} />
         </div>
     );
 }
