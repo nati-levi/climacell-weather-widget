@@ -2,7 +2,7 @@
 
 ![Screen Shot](https://raw.githubusercontent.com/nati-levi/climacell-weather-widget/master/public/screen.png "Screen Shot")
 
-![See Demo Here](https://climacell-weather-widget.herokuapp.com/?apikey=YOUR_API_KEY&lat=32&lon=34&location=Tel%20Aviv) (replace YOUR_API_KEY in query with your API key)
+[See Demo Here](https://climacell-weather-widget.herokuapp.com/?apikey=YOUR_API_KEY&lat=32&lon=34&location=Tel%20Aviv) (replace YOUR_API_KEY in query with your API key)
 
 This app is an example of a weather widget created with [Climacell Weather API](https://developer.climacell.co/).
 
