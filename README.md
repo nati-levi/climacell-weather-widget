@@ -6,7 +6,7 @@
 
 This app is an example of a weather widget created with [Climacell Weather API](https://developer.climacell.co/).
 
-See blog post explaining the steps to create it here: **LINK TO BLOG**
+See blog post explaining the steps to create it here: https://developer.climacell.co/blog/how-to-create-a-weather-widget-with-a-weather-api
 
 ## Install
 
